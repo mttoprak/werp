@@ -1,69 +1,69 @@
 # Werp
 
-Bu proje, sunucu ve kanal tabanlı bir sohbet uygulamasıdır. Kullanıcılar sunucu oluşturabilir, kanallarda mesajlaşabilir ve arkadaşlık istekleri gönderebilir.
+This project is a server and channel-based chat application. Users can create servers, chat in channels, and send friend requests.
 
-## Özellikler
-- Sunucu ve kanal oluşturma
-- Kanalda mesajlaşma (gerçek zamanlı)
-- Arkadaşlık isteği gönderme
-- JWT tabanlı kimlik doğrulama
-- Sunucuya davet kodu ile katılma
+## Features
+- Create servers and channels
+- Real-time messaging in channels
+- Send friend requests
+- JWT-based authentication
+- Join servers with invite codes
 
-## Kurulum
+## Installation
 
-### Gereksinimler
-- Node.js (v18+ önerilir)
-- MongoDB (local veya cloud)
+### Requirements
+- Node.js (v18+ recommended)
+- MongoDB (local or cloud)
 
-### Adımlar
-1. Depoyu klonlayın:
+### Steps
+1. Clone the repository:
    ```bash
    git clone <repo-url>
    ```
-2. Sunucu ve istemci dizinlerine bağımlılıkları yükleyin:
+2. Install dependencies for both server and client:
    ```bash
    cd deneme-project/server
    npm install
    cd ../client
    npm install
    ```
-3. Sunucu için `.env` dosyasını oluşturun ve MongoDB bağlantı adresinizi girin:
+3. Create a `.env` file for the server and enter your MongoDB connection string:
    ```env
    MONGO_URI=mongodb://localhost:27017/werp
    PORT=5000
-   JWT_SECRET=[rastgele bir değer1] 
+   JWT_SECRET=[random value1]
    JWT_EXPIRATION=1h
-   JWT_REFRESH_SECRET= [rastgele bir değer2]
+   JWT_REFRESH_SECRET=[random value2]
    JWT_REFRESH_EXPIRATION=7d
    ```
-4. İstemci için `.env` dosyasını oluşturun:
+4. Create a `.env` file for the client:
    ```env
    server=http://localhost:5000
    ```
 
-## Çalıştırma
+## Running
 
-### Sunucu
+### Server
 ```bash
 cd server
 npm start
 ```
 
-### İstemci
+### Client
 ```bash
 cd client
 npm run dev
 ```
 
-## Kullanım
-- Kayıt olun ve giriş yapın.
-- Sunucu oluşturun, kanal ekleyin.
-- Kanallarda mesajlaşın.
-- Arkadaş ekleyin ve davet kodu ile sunucuya katılın.
+## Usage
+- Register and log in.
+- Create servers and add channels.
+- Chat in channels.
+- Add friends and join servers with invite codes.
 
-## Katkı
-Pull request ve issue açabilirsiniz.
+## Contribution
+You can open pull requests and issues.
 
-## Lisans
+## License
 MIT
 
